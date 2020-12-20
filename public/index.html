@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>ES1BBQ</title>
-    <meta content="Website of ES1BBQ" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <style>
         @import url(https://fonts.googleapis.com/css?family=Quicksand);
@@ -13,7 +12,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #f7f7ff
+            background-color: #f7f7ff;
         }
 
         body {
@@ -30,22 +29,69 @@
             justify-content: center
         }
 
+        a {
+            color: inherit;
+        }
+
         .center {
             display: block;
-            vertical-align: middle
+            vertical-align: middle;
+            text-align: center;
         }
+
+        ul {
+            list-style: circle;
+            text-align: left;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex div {
+            width: 50%;
+        }
+
+        .highlight {
+            background-color: #343434;
+            color: #f7f7ff;
+            padding: 1em;
+        }
+
     </style>
 </head>
 <body>
     <div class="center">
-        <h1>ES1BBQ</h1>
+        <div class="flex">
+            <div class="blue">
+                <h1>ES1BBQ</h1>
+            </div>
+            <div class="highlight">
+                <h2>Isikliku</h2>
+                <ul>
+                    <li><a href="https://log.es1bbq.eu">Minu logitööriistad</a></li>
+                    <li><a href="https://www.dxinfocentre.com/tropo_eeu.html" target="_blank">Troposfääriliste levitingimuste
+                        ennustus</a></li>
+                    <li><a href="https://sond.ee">Raadiosondid</a></li>
+                </ul>
+                <h2>Muu</h2>
+                <ul>
+                    <li><a href="https://dmr.ee" target="_blank">DMR.ee</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        &copy; 2020 ES1BBQ
     </div>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6SSV97VX7"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-F6SSV97VX7');
     </script>
 </body>
