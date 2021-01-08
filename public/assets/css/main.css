@@ -176,3 +176,16 @@ ul li {
         text-align: center;
     }
 }
+
+/* Make dark-mode reality, todo: colourmatching */
+
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background-color: var(--main-colorschema-fg);
+        color: var(--main-colorschema-yellow);
+    }
+    .dark {
+        color: #000000;
+        background-color: var(--main-colorschema-fg);
+    }
+}
