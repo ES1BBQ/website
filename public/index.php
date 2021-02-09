@@ -9,7 +9,7 @@
     <meta content="ES1BBQ Homepage" name="description">
     <meta content="es1bbq,erau,ham,radio,amateur,callsign,qrz,qth,qsl,cq,qrzcq,logbook,antenna" name="keywords">
 
-    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
