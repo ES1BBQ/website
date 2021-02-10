@@ -1,45 +1,58 @@
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<?php
+    require_once dirname(__DIR__) . '/src/bootstrap.php';
 
-    <title>ES1BBQ</title>
+    $page = array(
+        'site_lang' => 'et',
+        'site_title' => 'ES1BBQ',
+        'site_description' => 'ES1BBQ Homepage',
+        'site_keywords' => implode(',',array(
+            'es1bbq',
+            'erau',
+            'ham',
+            'radio',
+            'amateur',
+            'callsign',
+            'qrz',
+            'qth',
+            'qsl',
+            'cq',
+            'qrzcq',
+            'logbook',
+            'antenna',
+        )),
+        'page_blocks' => array(
+            array(
+                'block_type' => $block_links,
+                'block_title' => 'Isiklik',
+                'block_links' => array(
+                    array(
+                        'url' => 'https://log.es1bbq.eu',
+                        'title' => 'Minu logid ja logitööriistad',
+                    ),
+                    array(
+                        'url' => 'https://www.dxinfocentre.com/tropo_eeu.html',
+                        'title' => 'Troposfääriliste levitingimuste ennustus',
+                        'target' => '_blank'
+                    ),
+                    array(
+                        'url' => 'https://sond.ee',
+                        'title' => 'Raadiosondid',
+                    ),
+                )
+            ),
+            array(
+                'block_type' => $block_links,
+                'block_title' => 'Muu',
+                'block_links' => array(
+                    array(
+                        'url' => 'https://dmr.ee',
+                        'title' => 'DMR.ee',
+                        'target' => '_blank'
+                    ),
+                )
+            ),
+        ),
+    );
 
-    <meta content="ES1BBQ Homepage" name="description">
-    <meta content="es1bbq,erau,ham,radio,amateur,callsign,qrz,qth,qsl,cq,qrzcq,logbook,antenna" name="keywords">
-
-    <link href="assets/css/main.css" rel="stylesheet">
-</head>
-<body>
-    <div class="wrapper">
-        <section>
-            <div class="right">
-                <h1>ES1BBQ</h1>
-            </div>
-            <div class="dark">
-                <h2>Isiklik</h2>
-                <ul>
-                    <li><a href="https://log.es1bbq.eu">Minu logitööriistad</a></li>
-                    <li><a href="https://www.dxinfocentre.com/tropo_eeu.html" target="_blank">Troposfääriliste levitingimuste ennustus</a></li>
-                    <li><a href="https://sond.ee">Raadiosondid</a></li>
-                </ul>
-                <h2>Muu</h2>
-                <ul>
-                    <li><a href="https://dmr.ee" target="_blank">DMR.ee</a></li>
-                </ul>
-            </div>
-        </section>
-        <footer>
-            &copy; 2020-2021 ES1BBQ
-        </footer>
-    </div>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6SSV97VX7"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-F6SSV97VX7');
-    </script>
-</body>
-</html>
+    $tpl = $mustache->loadTemplate('template');
+    echo $tpl->render($page);

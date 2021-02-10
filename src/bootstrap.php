@@ -13,3 +13,9 @@
             'strict_callables' => true,
         )
     );
+
+    /**
+     * Block Types
+     */
+
+    $block_links = function() { return '{{> block_links }}'; };

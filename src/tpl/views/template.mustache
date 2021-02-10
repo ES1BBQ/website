@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ site_lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+
+    <title>{{ site_title }}</title>
+
+    <meta content="{{ site_description }}" name="description">
+    <meta content="{{ site_keywords }}" name="keywords">
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <section>
+        <div class="right">
+            <h1>{{ site_title }}</h1>
+        </div>
+        <div class="dark">
+            {{# page_blocks }}
+                {{{ block_type }}}
+            {{/ page_blocks }}
+        </div>
+    </section>
+    <footer>
+        &copy; 2020-2021 ES1BBQ
+    </footer>
+</div>
+{{> google_analytics }}
+</body>
+</html>
